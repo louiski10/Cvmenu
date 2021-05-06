@@ -1,0 +1,162 @@
+body {
+    font-family: Verdana, Calibri, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #222538;
+}
+
+h1 {
+    display: inline-block;
+    padding: 10px;
+    background:linear-gradient(#256488,#424558,#222538);
+    border: solid;
+    border-radius: 20px; 
+    color: lightcyan;
+}
+
+header {
+    padding: 50px;
+    text-align: center;
+    background-image: url("../Pictures/codage.jpg");
+}
+
+#contakt {
+    display: flex;
+    padding: 100px;   
+}
+
+nav {
+    width: 100%;
+    background:linear-gradient(#256488,#424558,#222538);
+    border: solid;
+}
+
+
+nav > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    float: left;
+    position: relative;
+}
+
+nav > ul::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.submenu {
+    display: none;
+}
+
+nav input[type=checkbox]{
+    display: none;
+}
+
+nav label {
+    display: none;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav > ul > li > a{
+    padding: 20px 30px;
+    color: #FFF;
+}
+nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+nav li:hover .submenu{
+    display : inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.submenu li a{
+    padding: 15px 30px;
+    font-size: 13x;
+    color: #222538;
+    width: 270px;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.menu-accueil:hover{
+    border-top: 5px solid #e44;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+.menu-qsj:hover{
+    border-top: 5px solid #256488;
+    background-color: RGBa(000, 112, 192, 0.15)
+}
+
+
+.menu-contact:hover{
+    border-top: 5px solid #222538;
+    background-color: RGBa(220, 220,220, 0.15);
+}
+
+.menu-accueil .submenu{
+    background-color:#BBB;
+}
+
+.menu-qsj .submenu{
+    background-color: #BBB;
+}
+
+.menu-contact .submenu{
+    background-color:#BBB;
+}
+
+.submenu li:hover a{
+    color:#EEE;
+    font-weight: bold;
+}
+
+.menu-accueil .submenu li:hover{
+    background-color:#e44 ;
+}
+
+.menu-qsj .submenu li:hover{
+    background-color: #256488;
+}
+
+.menu-contact .submenu li:hover{
+    background-color:#222538 ;
+}
+
+
+
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+}
+
+@media screen and (max-width: 780px){
+    .menu-mobile{
+        display:block;
+        color: #FFF;
+        background-color: RGBa(29, 100, 97, 151, 0.97);
+        text-align: center;
+        padding: 12px 0px;
+    }
+    nav ul{
+        display: none;
+    }
+}
